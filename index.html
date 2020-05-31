@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name = "viewport" content="width=device-width,initial-scale=1.0"> 
+<title>7 segment display</title>
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+
+
+<div id="app">
+    <div class="display">
+        <div class="segment A" v-if="!A"></div>
+        <div class="segment B" v-if="!B"></div>
+        <div class="segment C" v-if="!C"></div>
+        <div class="segment D" v-if="!D"></div>
+        <div class="segment E" v-if="!E"></div>
+        <div class="segment F" v-if="!F"></div>
+        <div class="segment G" v-if="!G"></div>
+      </div>
+
+
+    <h1>{{number}}</h1>
+    <product @number-submitted="updateNumber" @number-delete="deleteNumber"></product>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src ="main.js"></script>
+</body>
+</html>
